@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>index 102</title>
+    <script type="text/javascript">
+        var myArray = ['a', 'b', 'c', 'b', 'a'];
+
+        /* Это не работает, т.к. не сравниваются соседние элементы... только непонятно, зачем тогда здесь функция sort
+        
+        myArray.sort();
+        
+           for (var i = 0; i < myArray.Length-1; i++) {
+               var j = i+1;
+                if myArray[i] == myArray[j] {
+                myArray.splice(j, 1);
+            }
+        }
+*/
+
+        function unique(arr) {
+            var obj = {};
+            for (var i = 0; i < arr.length; i++) {
+                var str = arr[i];
+                obj[str] = true;
+            }
+            return Object.keys(obj);
+        }
+
+
+        console.log(unique(myArray));
+
+    </script>
+</head>
+
+<body>
+    index 102
+
+</body>
+
+</html>
